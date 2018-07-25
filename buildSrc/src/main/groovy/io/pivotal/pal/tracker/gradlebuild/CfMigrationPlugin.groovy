@@ -75,7 +75,7 @@ class CfMigrationPlugin implements Plugin<Project> {
         def envJson = new JsonSlurper().parseText(envResponse)
         def vcapServices = envJson["system_env_json"]?.getAt("VCAP_SERVICES")
 
-        return vcapServices?.getAt("p-mysql")?.getAt(0)?.getAt("credentials")
+        return vcapServices?.getAt("cleardb")?.getAt(0)?.getAt("credentials")
     }
 
     private static String execute(String command) {
