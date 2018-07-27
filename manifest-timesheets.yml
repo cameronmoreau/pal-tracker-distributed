@@ -5,7 +5,12 @@ applications:
   - route: cm-sso-timesheets-pal-tracker-distributed-review.cfapps.io
   memory: 1G
   instances: 1
+  env:
+    GRANT_TYPE: client_credentials
+    SECURITY_USER_NAME: actuator
+    SECURITY_USER_PASSWORD: operations4red
   services:
   - tracker-timesheets-database
   - tracker-service-registry
   - tracker-circuit-breaker-dashboard
+  - tracker-sso
