@@ -2,7 +2,7 @@ applications:
 - name: tracker-timesheets
   path: ./applications/timesheets-server/build/libs/timesheets-server.jar
   routes:
-  - route: cm-timesheets-pal-tracker-distributed-review.cfapps.io
+  - route: cm-sso-timesheets-pal-tracker-distributed-review.cfapps.io
   memory: 1G
   instances: 1
   services:
